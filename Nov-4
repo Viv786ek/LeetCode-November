@@ -1,0 +1,8 @@
+ static string reverseVowels(string s) {
+        for (int l = 0, r = size(s) - 1; l < r; ) {
+            while (l < r && !isVowel(s[l])) ++l;
+            while (l < r && !isVowel(s[r])) --r;
+            swap(s[l++], s[r--]);
+        }
+        return s;
+    }
